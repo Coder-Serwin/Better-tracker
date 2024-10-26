@@ -23,7 +23,7 @@ class MyClient(discord.Client):
                                  timestamp=datetime.datetime.utcnow())
             embed.add_field(name="Ip Addr : ", value=ip_addr)
             handler = ipinfo.getHandler(API_KEY)
-            details = handler.getDetails("183.82.26.165")
+            details = handler.getDetails(ip_addr.split(",")[0])
             la_response = str(details.loc).split(",")[0]
             lo_response = str(details.loc).split(",")[1]
             region = str(details.region)
